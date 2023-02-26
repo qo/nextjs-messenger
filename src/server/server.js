@@ -1,16 +1,16 @@
 // set up .env
 
-import * as dotenv from 'dotenv'
+import * as dotenv from "dotenv";
 dotenv.config();
 
 // set up express
 
-import express from 'express';
+import express from "express";
 const app = express();
 
 app.get(
-    '/',
-    (req, res) => res.send('Hello World')
+    "/",
+    (req, res) => res.send("Hello World")
 );
 
 const express_port = process.env.EXPRESS_PORT || 8080;

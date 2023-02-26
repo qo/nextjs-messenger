@@ -35,4 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/server/.env
+# ignore package-lock.json because package.json
+# fixes all dependencies versions
+package-lock.json

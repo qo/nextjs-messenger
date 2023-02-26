@@ -6,18 +6,18 @@ const Message = model(
     "Message",
     new Schema({
         user: {
-                type: Schema.Types.ObjectId,
-                ref: User
+            type: Schema.Types.ObjectId,
+            ref: User
         },
         chat: {
-                type: Schema.Types.ObjectId,
-                ref: Chat
+            type: Schema.Types.ObjectId,
+            ref: Chat
         },
         time: Date,
         content: String,
         read_by: [{
-                type: Schema.Types.ObjectId,
-                ref: User
+            type: Schema.Types.ObjectId,
+            ref: User
         }]
     })
 );
