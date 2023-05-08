@@ -1,25 +1,45 @@
+import { Box, Typography, useTheme } from "@mui/material";
 import Head from "next/head";
 import Link from "next/link";
-import Typography from "@mui/material/Typography";
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
+    const theme = useTheme();
     return (
         <>
             <Head>
                 <title>NextJS Messenger</title>
             </Head>
-            <main className={styles.main}>
-                <Typography variant="h4" component="h4">
+            <Box
+                component="main"
+                sx={{
+                width: "100%",
+                height: "100vh",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                background: theme.palette.background.default
+                }}
+            >
+                <Typography
+                    variant="h4"
+                    component="h4"
+                    color={theme.palette.text.primary}
+                    marginBottom="50px"
+                >
                     NextJS Messenger
                 </Typography>
-                <Link href="/signin">
-                    <Typography>Sign In</Typography>
+                <Link href="/signin" >
+                    <Typography color={theme.palette.text.primary}>
+                        Sign In
+                    </Typography>
                 </Link>
                 <Link href="/signup">
-                    <Typography>Sign Up</Typography>
+                    <Typography color={theme.palette.text.primary}>
+                        Sign Up
+                    </Typography>
                 </Link>
-            </main>
+            </Box>
         </>
     );
 }
